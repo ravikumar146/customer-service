@@ -65,5 +65,6 @@ public class Address extends BaseEntity {
     private String postalCode;
 
     @Column(nullable = false)
+    @Builder.Default
     private boolean defaultAddress = false;
 }

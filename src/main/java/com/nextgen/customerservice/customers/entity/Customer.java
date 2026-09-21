@@ -55,6 +55,7 @@ public class Customer extends BaseEntity {
     private CustomerStatus status;
 
     @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL, orphanRemoval = true)
+    @Builder.Default
     private List<Address> addresses = new ArrayList<>();
 
     public void addAddress(Address address) {
